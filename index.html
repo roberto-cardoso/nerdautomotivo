@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerd Automotivo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Nerd Automotivo</h1>
+    <p>Os melhores produtos automotivos para você e sua máquina 🚗</p>
+</header>
+
+<main>
+    <section class="produtos" id="listaProdutos">
+        <!-- Produtos inseridos via JavaScript -->
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 - Nerd Automotivo | Conteúdo com links afiliados</p>
+</footer>
+
+<script>
+    const produtos = [
+        {
+            nome: "Corrente com Pingente Aço Inox Moto Fantasma",
+            imagem: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lq2s2dpw6f4v9a.webp",
+            link: "https://s.shopee.com.br/9zrQBvonyL?share_channel_code=1"
+        },
+        {
+            nome: "Corrente Mais Pingente Aço Inox Harley",
+            imagem: "https://down-br.img.susercontent.com/file/2a9fac8a84f6e31b3f022e1c08f6ef26.webp",
+            link: "https://s.shopee.com.br/5L5aevxqp6?share_channel_code=1"
+        },
+        {
+            nome: "Capacete FW3 Fechado com Narigueira Alta",
+            imagem: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lh3go0df5yuud5.webp",
+            link: "https://s.shopee.com.br/3fxMfyJEW0?share_channel_code=1"
+        },
+        {
+            nome: "Corrente com Pingente Aço Inox Moto Fantasma",
+            imagem: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lq2s2dpw6f4v9a.webp",
+            link: "https://s.shopee.com.br/9zrQBvonyL?share_channel_code=1"
+        },
+        {
+            nome: "Corrente Mais Pingente Aço Inox Harley",
+            imagem: "https://down-br.img.susercontent.com/file/2a9fac8a84f6e31b3f022e1c08f6ef26.webp",
+            link: "https://s.shopee.com.br/5L5aevxqp6?share_channel_code=1"
+        },
+        {
+            nome: "Capacete FW3 Fechado com Narigueira Alta",
+            imagem: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lh3go0df5yuud5.webp",
+            link: "https://s.shopee.com.br/3fxMfyJEW0?share_channel_code=1"
+        },
+        {
+            nome: "Corrente Mais Pingente Aço Inox Harley",
+            imagem: "https://down-br.img.susercontent.com/file/2a9fac8a84f6e31b3f022e1c08f6ef26.webp",
+            link: "https://s.shopee.com.br/5L5aevxqp6?share_channel_code=1"
+        },
+        {
+            nome: "Capacete FW3 Fechado com Narigueira Alta",
+            imagem: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lh3go0df5yuud5.webp",
+            link: "https://s.shopee.com.br/3fxMfyJEW0?share_channel_code=1"
+        }
+    ];
+
+    const container = document.getElementById("listaProdutos");
+
+    produtos.forEach(produto => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <div class="card-content">
+                <h3>${produto.nome}</h3>
+                <a class="btn" href="${produto.link}" target="_blank">
+                    Ver Oferta
+                </a>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
